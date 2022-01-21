@@ -1,0 +1,137 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content1 %}
+  <title>Home</title>
+{% endblock content1 %}
+{% block content %}
+    <!-- landing image -->
+      <section class="landing">
+        <img src="{% static 'main/images/about_s1.jpg' %}" alt="image" class="resposive" width="100%" height=750px>
+        <br />
+        <br />
+      </section>
+
+      <!-- items -->
+      <center>
+    <section class="grid ">
+      <div class="row padding container-fluid ">
+        <div class="col-lg-4 ">
+    <img src="{% static 'main/images/icon1.png' %}" class="round">
+          <h3 class="display-8"><b>QUALITY-TESTED PRODUCTS</b></h3>
+          <p class="lead"><b>Our products are widely acknowledged by our clients for their superior quality and functionality.</b></p><br />
+        </div>
+        <div class="col-lg-4">
+          <img src="{% static 'main/images/icon2.png' %}" class="round">
+          <h3 class="display-8"><b>INDUSTRY LEADING PRICES</b></h3>
+          <p class="lead "><b>We probably have the best prices among the competing market.</b></p>
+        </div>
+        <div class="col-lg-4">
+          <img src="{% static 'main/images/icon3.png' %}" class="round">
+          <h3 class="display-8"><b>PROMPT DELIIVERY</b></h3>
+          <p class="lead"><b>Our quality control section is supported by industrious and qualified quality.</b></p>
+        </center>
+        </div>
+      </div>
+  </section>
+
+  <!-- section 3 -->
+  <section class="kriston" >
+    <div class="row padding container-fluid">
+      <div class="col-md-7">
+        <h4 class="display-6"><b>KRISTON<br />
+        ROYLE PRESSURE COOKER</b></h4><br />
+        <p class="lead" style="color:grey;">KRISTON ROYALE range of cookware is made from WROUGHT Aluminium material to ensure the
+           food get cooked evenly and quickly.It has specially designed handles for ease of operations.It comprises of
+            responsive safety value to ensure safe cooking.<br /><br />
+            <button class = "btn btn-danger" type = "submit">Read More</button>
+          </p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <img src="{% static 'main/images/product1.png' %}" alt="" width="130%" height="auto"><br />
+
+      </div>
+    </div>
+  </section>
+  <br /><br />
+
+  <!-- products on cards -->
+
+    <section class="card-deck main-card" id="prod">
+    <div class="row">
+      <div class="prod-colmn col-lg-4">
+        <div class="card shadow hcard" style="height:22rem; border-radius:10%;"  >
+          <img src="{% static 'main/images/product2.png' %}" alt="KRISTON" class="card-image-top imgc img-fluid" style="z-index:1;position:relative;" >
+            <div class="card-body">
+              <h4 class="display-5 card-title"><b>KRISTON</b></h4>
+              <p class="lead card-text">
+                Leading Pressure Cooker
+
+              </p>
+              <a href="{% url 'main-kriston' %}" class="btn btn-primary">Know More</a>
+            </div>
+        </div>
+      </div>
+      <div class="prod-colmn col-lg-4">
+        <div class="card shadow hcard"  style="height:22rem;border-radius:10%;" >
+    <img src="{% static 'main/images/product3.png' %}" alt="SURYA" class="card-image-top img-fluid imgc" style="z-index:1;position:relative;">
+      <div class="card-body">
+        <h4 class="display-5 card-title"><b>SURYA INTECH</b></h4>
+        <p class="lead card-text">
+          Leading Pressure Cooker
+
+        </p>
+      <a href="{% url 'main-suryaIntech' %}" class="btn btn-primary">Know More</a>
+      </div>
+    </div>
+    </div>
+    <div class="prod-colmn col-lg-4">
+        <div class="card shadow hcard"  style="height:22rem; border-radius:10%;" >
+      <img src="{% static 'main/images/product4.png' %}" alt="sri chakra" class="card-image-top imgc img-fluid size" style="z-index:1;position:relative;">
+      <div class="card-body">
+        <h4 class="display-5 card-title"><b>SRI CHAKRA</b></h4>
+        <p class="lead card-text">
+          Leading Pressure Cooker</p>
+        <a href="{% url 'main-srichakra' %}" class="btn btn-primary">Know More</a>
+      </div>
+    </div>
+    </div>
+   </div>
+  </section>
+
+  <!--  new section-->
+  <section class="kaushik" >
+    <div class="row padding container-fluid">
+      <div class="col-md-7">
+        <h4 class="display-5"><p style="color:#B22222"><b>MR.KAUSHIK <br/>SANGAMESHVARAN.</b></p>
+        </h4><br />
+        <p class="lead "><p style="color:#000000"><b>A MESSAGE FROM OUR MD.</b><br /><br />
+            <button class = "btn btn-danger" type = "submit">Read More</button>
+          </p>
+      </div>
+
+    </div>
+  </section>
+
+    <p class="lead"><center><b><h2>COMPANY AWARDS</h2></b><center/></p>
+
+  <!--  awards section-->
+  <center>
+  <section class="awards ">
+  <div class="row padding container-fluid ">
+    <div class="col-lg-4 ">
+     <img src="{% static 'main/images/prod_ic1.png' %}"height="190"width="190">
+       <p class="lead"><b>Best pressure<br/>cooker<br/>manufacture 2019</b></p><br />
+    </div><br/>
+    <div class="col-lg-4">
+      <img src="{% static 'main/images/prod_ic2.png' %}"height="190"width="190">
+      <p class="lead "><b>Best pressure<br/>cooker<br/>manufacture 2019</b></p>
+    </div>
+    <div class="col-lg-4">
+      <img src="{% static 'main/images/prod_ic3.png' %}"height="190"width="190">
+      <p class="lead"><b>Best pressure<br/>cooker<br/>manufacture 2019</b></p>
+    </center>
+    </div>
+  </div>
+  </section>
+
+{% endblock content %}

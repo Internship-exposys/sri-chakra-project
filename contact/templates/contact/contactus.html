@@ -1,0 +1,46 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content1 %}
+  <title>Contact Us</title>
+{% endblock content1 %}
+
+{% block content %}
+
+    <section id="Contact">
+            <div class="container-fluid">
+      <div class="content container-fluid" >
+          <h4 class="display-4" ><strong><center>Contact Us</center></strong></h4>
+          <br />
+          <br />
+    <div class="row bg_cont">
+    <div class="col-lg-6">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15553.619399459245!2d77.526046!3d12.945926!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2ec4040a594e9c33!2sSri%20Chakra%20Industries!5e0!3m2!1sen!2sin!4v1582328244330!5m2!1sen!2sin"
+            class="map-contact"  width="480px" height="880px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+    <div class="row col-lg-6" style="padding-top: 20px;">
+     <div class="col-lg-6">
+        <p class="lead"><b><strong>Address:</strong></b><br />13/14, Mysore road, Azeez Sait Industrial Estate, Nayanda Halli, Bengaluru, Karnataka 560039</p>
+     </div>
+     <div class="col-lg-6 lead">
+        <p class="lead"><span style="font-weight: 800;color: black">Telephone number:</span><br />
+          <span style="margin-left: -10%;margin-top: 20px;" class="span">&ensp;080 2339 2877</p>
+        <p ><span style="font-weight: 800;color: black">Email address:&nbsp</span> &nbsp&nbsp<span style="margin-left: -10%;margin-top: 20px;" class="span">srichakrablr2020@gmail.com</p>
+    </div>
+
+    <form class="alg_form" action="" method="post">
+      <div class="col-lg-6 lead">
+
+      {{ form|crispy }}
+      {% csrf_token %}
+      <input type="submit" name="" value="Submit" class="btn btn-danger contact_us button1">
+      </div>
+
+    </form>
+  </div>
+   </div>
+     </div>
+   </div>
+
+
+{% endblock content %}

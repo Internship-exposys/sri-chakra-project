@@ -1,0 +1,315 @@
+html{
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+/* navigation */
+
+.nav-item {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.navbar-brand{
+  padding-left: 50px;
+}
+
+.round{
+  height: 100px;
+  width: 100px;
+  box-shadow: 2px 2px 200px 1px #000;
+  border-radius: 50%;
+}
+.container-fluid{
+  padding: 3% 10%;
+}
+.h4{
+  color: #000;
+  line-height: 2rem;
+
+}
+/*  landing image */
+@media only screen and (max-width:400px){
+  img.resposive{
+    height:640px;
+  }
+}
+/* cards */
+.main-card{
+  padding-left: 200px;
+  padding-right: 200px;
+  margin-bottom: 40px;
+}
+.card{
+  padding:10px 20px;
+  border-radius: 10%;
+  align:left;
+  }
+
+
+ @media only screen and (max-width:500px) {
+    .card{
+      width: 250px;
+      padding: 20px 1px;
+      margin-bottom: 30px;
+      padding-top: 30px;
+
+
+    }
+  }
+
+.imgc{
+  margin-top: -45%;
+  height: 352px;
+  width: 450px;
+}
+
+@media only screen and (max-width:500px) {
+  .imgc{
+    padding-top:1%;
+    height:220px;
+    width:500px;
+  }
+  .size{
+    padding-top: 13%;
+    height: 220px;
+  }
+}
+.hcard{
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+
+}
+
+.hcard:hover {
+  background:#e74c3c;
+  color: #fff;
+  transform: scale(1.1);
+
+}
+.btn:hover{
+  background:#fff;
+  color: #000;
+}
+.pcard:hover{
+  transform: scale(1.1);
+}
+.kriston{
+  position: relative;
+    font-weight: bold;
+    line-height: 2rem;
+  padding-left: 80px;
+  font-family: Monsterat-black;
+}
+
+.footer{
+  text-align: left;
+  background-image: linear-gradient(to right, rgb(97, 57, 54) 60%, rgb(97, 57, 54) 10%, rgb(165, 30, 21) 100%);
+}
+.line {
+  line-height: 40px;
+  font-weight: 400;
+  color: white;
+}
+.size{
+  font-size:17px;
+}
+.gap{
+  padding-right: 40px;
+}
+#prod{
+  padding: 100px;
+}
+
+.prod-colmn{
+  padding: 2% 3%;
+}
+
+.jumbotron{
+  margin-top: 400px;
+  padding: 2rem;
+  background-color: #800000;
+  /* background-color:  linear-gradient(to-right,#800000 73%, #cc3300 100%); */
+  background-size: cover;
+  color: #fff;
+}
+
+.fa-facebook,
+.fa-linkedin,
+.fa-youtube,
+.fa-whatsapp{
+    color: #fff;
+}
+
+.kaushik{
+  position: relative;
+    font-weight: bold;
+    line-height: 2rem;
+  padding-left: 80px;
+  font-family: Monsterat-black;
+  color:#800000;
+}
+
+/* Page KRISTON */
+.full{
+  height:80vh;
+  background-size: cover;
+  background-position: center;
+  color:#000;
+}
+
+.box{
+
+  position: relative;
+  height: 120%;
+  width: 75%;
+  transform: translate(15%,20%);
+  display: flex ;
+  background: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-self: stretch;
+  text-align: center;
+  color: #000;
+}
+
+.text{
+  align-items: flex-start;
+}
+
+/* Page About */
+
+#about{
+  padding: 5% 9%;
+}
+
+@media only screen and (max-width:400px) {
+  #about{
+    padding: 2% 5%;
+  }
+}
+.card-about{
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-width:400px) {
+  .card-about{
+    position: relative;
+    padding-top: 0px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 10px;
+
+  }
+  .leadx{
+      line-height: 1.6rem;
+  }
+}
+.content1{
+  background-color: #000;
+  color: #fff;
+  width:110%;
+  background-size: contain;
+  z-index: -1;
+}
+
+.shadow{
+  box-shadow: 10px 15px #888888;
+}
+.center1{
+  text-align: center;
+}
+.fax{
+ margin-left: 35px;
+}
+
+@media only screen and (max-width:400px) {
+  .fax{
+    margin-left: 1px;
+  }
+@media only screen and (max-width:400px) {
+  .abt{
+    padding-top: 50px;
+    padding-left: 0%;
+    margin-left: 0%;
+  }
+
+}
+
+@media only screen and (max-width:400px) {
+  img.abt-img{
+    width: 400px;
+    padding-top: 10%;
+
+  }
+}
+
+@media only screen and (max-width:400px) {
+  card.acard{
+      /* display: flex; */
+      padding:  0px 20px;
+  }
+
+}
+/* Media queries for whole text and main image */
+
+
+
+@media only screen and (max-width:700px) {
+  .lead{
+    font-size:20px;
+    line-height: 2.0rem;
+  }
+}
+
+@media only screen and (max-width:700px) {
+  .display-4,.display-8,.display-6{
+    font-size: 30px;
+    line-height: 2.1rem;
+  }
+  .display-5{
+    font-size:25px;
+    line-height: 2.1rem;
+  }
+}
+
+/*page contact us*/
+
+.form {
+margin: 0 auto;
+width: 210px;
+}
+
+.form label{
+display: inline-block;
+text-align: left;
+float: left;
+}
+
+.form input{
+display: inline-block;
+text-align: left;
+float: right;
+}
+.button1 {background-color: #800000;border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+}
+
+@media only screen and (max-width:400px) {
+iframe.map-contact{
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 300px;
+}

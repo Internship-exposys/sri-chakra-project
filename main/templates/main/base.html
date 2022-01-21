@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport"/>
+
+    {% block content1 %}{% endblock %}
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first,then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  </head>
+  <body>
+    <!-- navigation -->
+    <section class="navigation">
+      <div class="conatainer-fluid">
+            <nav class="navbar-nav fixed-top navbar-expand-lg navbar-dark bg-dark" >
+              <a class="navbar-brand" href="#"><img src="{% static 'main/images/logo.jpeg' %}" style = "width:120px;border-radius:6%;" alt="logo"></a>
+              <button type="button" class="navbar-toggler"  data-toggle="collapse" data-target="#navbarToggler" aria-expanded="false" aria-controls="navbarToggler">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div id="navbarToggler" class="collapse  navbar-collapse  " >
+
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'main-index' %}">HOME</a>
+                  </li>
+                  <li class="nav-item active">
+                  <a class="nav-link" href="#"> BULK ORDERS</a>
+                  </li>
+                  <li class="nav-item active dropdown">
+                    <a class = "nav-link dropdown-toggle" href = "#"
+                    id = "navbarDropdownMenuLink" role = "button" data-toggle = "dropdown"
+                    aria-haspopup = "true" aria-expanded = "false">OUR PRODUCTS </a>
+                    <div class = "dropdown-menu" aria-labelledby = "navbarDropdownMenuLink">
+                        <a class = "dropdown-item" href = "{% url 'main-kriston' %}">KRISTON ROYLAE</a><hr />
+                        <a class = "dropdown-item" href = "{% url 'main-suryaIntech' %}">SURYA INTECH</a><hr />
+                        <a class = "dropdown-item" href = "{% url 'main-srichakra' %}">SRI CHAKRA</a>
+                     </div>
+                  </li>
+                  <li class="nav-item active">
+                  <a class="nav-link" href="#"> CATALOGUE</a>
+                  </li>
+                  <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'main-about' %}"> ABOUT US</a>
+                  </li>
+                  <<li>
+                    <a href="{% url 'contactus' %}" class="btn btn-danger">CONTACT US-></a>
+                     &ensp;&ensp;
+                  </li>
+                </ul>
+             </div>
+           </nav>
+        </div>
+    </section>
+    <br><br><br>
+    <div class="container">
+      {% if messages %}
+        <div class="row">
+          <div class="col-xs-12">
+              {% for message in messages %}
+                <p{% if message.tags %} class="alert alert-{{ message.tags }}" {% endif %}>{{ message }}</p>
+
+              {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <!--footer-->
+        <section class="footer" id="bottom">
+            <div class="container-fluid row ">
+              <div class="col-lg-5 gap"style="color:white;">
+                 <h4 class="display-6"><b>SRI CHAKRA INDUSTRIES</b></h4>
+                 <p class="lead "><b class="line">About Us</b><br /><br />
+                   Sri Chakra Industries is known as the foremost manufacturer of a high-quality range of Plain Base Pressure Cooker,
+                    Cookware Sets, Offered Plain Base Pressure Cooker, Cookware Sets, are well-known for the features like long
+                     working life, high functionality, and low maintenance.
+                           <br /><br />
+                     <b class="line">Our Address</b><br />
+                     13/14, Azeez Sait Industrial Estate, Nayandhalli Mysore Road,
+                     Bangalore,Karnataka,India,560039
+                 </p>
+              </div>
+
+              <div class="col-lg-3 gap">
+                <ul class="line" style="list-style-type:none;color:#FFFFFF;">
+                  <div><h4 class="display-5"><b>CATEGORIES</b></h4></div>
+                  <div class="lead">
+                    <li><a href="{% url 'main-products' %}" style="color:#FFFFFF"> Products</a></li>
+                    <li><a href="#" style="color:#FFFFFF">Our team</a></li>
+                    <li><a href="{% url 'contactus' %}" style="color:#FFFFFF">Contact Us</a></li>
+                    <li><a href="#" style="color:#FFFFFF">Catalogue</a></li>
+                    <li><a href="#" style="color:#FFFFFF">Orders</a></li>
+                  </div>
+
+
+                   </ul>
+              </div>
+
+              <div class="col-lg-3  gap">
+                  <ul class="line" style="list-style-type:none;">
+                    <h4 class="display-5"><b>CONTACT</b></h4>
+                    <li class="lead">080 2339 2877</li>
+                    <li class="lead">srichakrablr2020@gmail.com</li>
+                    <li><a href="#"><i class="fab fa-facebook" aria-hidden="true" ></i></a>&ensp;&ensp;
+                    <a href="#"><i class="fab fa-linkedin" aria-hidden="true" ></i></a>&ensp;&ensp;
+                    <a href=""><i class="fab fa-whatsapp" aria-hidden="true"></i></a>&ensp;&ensp;
+                    <a href="#"><i class="fab fa-youtube" aria-hidden="true" ></i></a></li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </body>
+    </html>

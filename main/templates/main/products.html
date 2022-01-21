@@ -1,0 +1,51 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content1 %}
+  <title>Products</title>
+{% endblock content1 %}
+{% block content %}
+<br><br><br><br>
+<section class="card-deck main-card" id="prod">
+<div class="row">
+  <div class="prod-colmn col-lg-4">
+    <div class="card shadow hcard" style="height:22rem; border-radius:10%;"  >
+      <img src="{% static 'main/images/product2.png' %}" alt="KRISTON" class="card-image-top imgc img-fluid" style="z-index:1;position:relative;" >
+        <div class="card-body">
+          <h4 class="display-5 card-title"><b>KRISTON</b></h4>
+          <p class="lead card-text">
+            Leading Pressure Cooker
+
+          </p>
+          <a href="{% url 'main-kriston' %}" class="btn btn-primary">Know More</a>
+        </div>
+    </div>
+  </div>
+  <div class="prod-colmn col-lg-4">
+    <div class="card shadow hcard"  style="height:22rem;border-radius:10%;" >
+<img src="{% static 'main/images/product3.png' %}" alt="SURYA" class="card-image-top img-fluid imgc" style="z-index:1;position:relative;">
+  <div class="card-body">
+    <h4 class="display-5 card-title"><b>SURYA INTECH</b></h4>
+    <p class="lead card-text">
+      Leading Pressure Cooker
+
+    </p>
+  <a href="{% url 'main-suryaIntech' %}" class="btn btn-primary">Know More</a>
+  </div>
+</div>
+</div>
+<div class="prod-colmn col-lg-4">
+    <div class="card shadow hcard"  style="height:22rem; border-radius:10%;" >
+  <img src="{% static 'main/images/product4.png' %}" alt="sri chakra" class="card-image-top imgc img-fluid size" style="z-index:1;position:relative;">
+  <div class="card-body">
+    <h4 class="display-5 card-title"><b>SRI CHAKRA</b></h4>
+    <p class="lead card-text">
+      Leading Pressure Cooker</p>
+    <a href="{% url 'main-srichakra' %}" class="btn btn-primary">Know More</a>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+
+{% endblock content %}
